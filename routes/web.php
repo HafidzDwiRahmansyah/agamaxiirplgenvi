@@ -19,10 +19,10 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [IndexController::class, 'index']);
+Route::get('/materi', [IndexController::class, 'materi_agama']);
 
-// hdr 
-Route::get('/', [IndexController::class, 'index']);
+// // hdr
+// Route::get('/', [IndexController::class, 'index']);
 
 
-Route::get('/', [IndexController::class, 'index']);
-
+// Route::get('/', [IndexController::class, 'index']);

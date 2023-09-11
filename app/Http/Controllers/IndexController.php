@@ -9,4 +9,8 @@ class IndexController extends Controller
     function index() {
         return view('index');
     }
+
+    function materi_agama(){
+        return view('materi');
+    }
 }
