@@ -20,6 +20,20 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/materi', [IndexController::class, 'materi_agama']);
+Route::get('/jadwal_sholat', [IndexController::class, 'jadwal_sholat']);
+Route::get('/alquran', [IndexController::class, 'alquran']);
+
+Route::get('/materi/rasa-bersyukur', function () {
+    return view('materi/bersyukur');
+});
+
+Route::get('/materi/hari-akhir', function () {
+    return view('materi/kiamat');   
+});
+
+Route::get('/materi/menjadi-yang-terbaik', function () {
+    return view('materi/menjadi-terbaik');
+});
 
 // // hdr
 // Route::get('/', [IndexController::class, 'index']);

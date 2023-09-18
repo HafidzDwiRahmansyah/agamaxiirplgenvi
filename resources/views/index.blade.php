@@ -1,5 +1,5 @@
 @extends('layout.mainlayout')
-
+@section('title','Website Agama')
 @section('content')
     <div class="container">
         <div class="row">

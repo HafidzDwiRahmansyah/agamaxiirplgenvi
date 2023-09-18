@@ -13,4 +13,12 @@ class IndexController extends Controller
     function materi_agama(){
         return view('materi');
     }
+
+    function jadwal_sholat(){
+        return view('jadwal_sholat');
+    }
+
+    function alquran(){
+        return view('alquran');
+    }
 }
