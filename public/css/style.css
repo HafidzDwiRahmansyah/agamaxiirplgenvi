@@ -3,23 +3,67 @@
 } */
 
 body {
-    font-family: "iogensans-Bold";
+    font-family: 'Commissioner', sans-serif;
 }
 
 :root{
     --bs-primary-color: #d0e6fb;
+    --bs-blue-color: #06B6D4;
     --bs-seccondary-color: #19263B;
 }
 
 /* ALL SECTION  */
 
-.gradient-overlay {
-    position: relative;
-    bottom: 10px;
+.line-limiting {
     width: 100%;
-    height: 20px;
+    height: 17px;
     background-color: #142032;
     /* background: linear-gradient(to bottom, var(--bs-seccondary-color), rgba(0, 255, 0, 0)); */
+}
+
+.color-primary {
+    color: var(--bs-primary-color) !important;
+}
+
+.fs-sm {
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+hr {
+    opacity: 0.1;
+}
+
+.fw-bolder {
+    font-weight: 500 !important;
+}
+
+.fw-bold {
+    font-weight: 600 !important;
+}
+
+.card-header, .card-footer {
+    background: #F8FAFC !important;
+}
+
+.text-title {
+    position: relative;
+    padding-left: 20px;
+}
+
+.text-title::before{
+    content: '';
+    left: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background: var(--bs-seccondary-color);
+    width: 6px;
+    height: 100%;
+}
+
+.text-title.dark::before{
+    background: var(--bs-blue-color) !important;
 }
 
 /* END ALL SECTION  */
@@ -45,16 +89,79 @@ body {
 }
 
 #hero-banner .content {
-    margin-top: 575px;
+    margin-top: 580px;
 }
 
 #hero-banner h1 {
     color: var(--bs-primary-color);
     font-size: 50px;
+    letter-spacing: 0.5px;
 }
 #hero-banner p {
     color: var(--bs-primary-color);
-    font-size: 30px;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0.9px;
 }
 
 /* end hero section  */
+
+/* jadwal sholat section  */
+
+#jadwal-sholat {
+    height: 800px;
+}
+
+#jadwal-sholat h1 {
+    font-size: 40px;
+    color: var(--bs-seccondary-color);
+    font-weight: 600;
+}
+
+#jadwal-sholat .container .month .card .card-body {
+    height: 500px;
+    overflow: auto;
+}
+
+/* end jadwal sholat section  */
+
+/* alquran-audio section  */
+
+#alquran-audio{
+    height: 100%;
+    background: var(--bs-seccondary-color);
+}
+
+#alquran-audio .card-footer button{
+    z-index: 5;
+    width: 80px;
+    height: 80px;
+    bottom: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#alquran-audio .audio-content .progress{
+    background: #F1F5F9 !important;
+    height: 8px;
+}
+
+#alquran-audio .audio-content .progress .progress-bar{
+    background: var(--bs-blue-color) !important;
+}
+
+#alquran-audio .audio-content .progress .progress-bar.animate{
+    width: 0%;
+    animation: audioBarAlIsra 11s linear;
+}
+
+@keyframes audioBarAlIsra {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* end alquran-audio section  */

@@ -20,8 +20,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/materi', [IndexController::class, 'materi_agama']);
-Route::get('/jadwal_sholat', [IndexController::class, 'jadwal_sholat']);
-Route::get('/alquran', [IndexController::class, 'alquran']);
+Route::get('/jadwal-sholat', [IndexController::class, 'jadwal_sholat'])->name('jadwalSholat');
+Route::get('/al-quran', [IndexController::class, 'alquran'])->name('alquran');
 
 Route::get('/materi/rasa-bersyukur', function () {
     return view('materi/bersyukur');
