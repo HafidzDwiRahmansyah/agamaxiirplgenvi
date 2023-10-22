@@ -24,33 +24,34 @@ class IndexController extends Controller
         // $getJadwal = $filteredJadwal[0];
 
         // get jadwal adzan 
-        $year = Carbon::now()->format('Y');
-        $month = Carbon::now()->format('m');
+        // $year = Carbon::now()->format('Y');
+        // $month = Carbon::now()->format('m');
 
-        $url = "https://cdn.statically.io/gh/lakuapik/jadwalsholatorg/master/adzan/bogor/{$year}/{$month}.json";
-        $jadwal = Http::get($url)->json();
-        $today = Carbon::now()->format('Y-m-d');
-        $getJadwal = collect($jadwal)->firstWhere('tanggal', $today);
+        // $url = "https://cdn.statically.io/gh/lakuapik/jadwalsholatorg/master/adzan/bogor/{$year}/{$month}.json";
+        // $jadwal = Http::get($url)->json();
+        // $today = Carbon::now()->format('Y-m-d');
+        // $getJadwal = collect($jadwal)->firstWhere('tanggal', $today);
         
         // get alquran
         $EPquran = Http::get('https://equran.id/api/v2/surat/17')->json();
         $alisra = $EPquran['data']['ayat']['31'];
 
         // get day and date 
-        $bulanIni = Carbon::now();
-        $bulanIni->day(1);
-        $hariDanTanggal = [];
-        while ($bulanIni->month == Carbon::now()->month) {
-            $hariDanTanggal[] = [
-                'tanggal' => $bulanIni->format('D, d M'),
-                'hari' => $bulanIni->isoFormat('dddd'), 
-            ];
-            $bulanIni->addDay(); 
-        }
+        // $bulanIni = Carbon::now();
+        // $bulanIni->day(1);
+        // $hariDanTanggal = [];
+        // while ($bulanIni->month == Carbon::now()->month) {
+        //     $hariDanTanggal[] = [
+        //         'tanggal' => $bulanIni->format('D, d M'),
+        //         'hari' => $bulanIni->isoFormat('dddd'), 
+        //     ];
+        //     $bulanIni->addDay(); 
+        // }
 
         // dd($hariDanTanggal);
 
-        return view('index', compact('getJadwal','alisra', 'jadwal', 'hariDanTanggal'));
+        // return view('index', compact('getJadwal','alisra', 'jadwal', 'hariDanTanggal'));
+        return view('index', compact('alisra'));
     }
 
     function materi_agama(){

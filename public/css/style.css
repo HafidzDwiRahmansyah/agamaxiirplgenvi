@@ -3,10 +3,10 @@
 } */
 
 body {
-    font-family: 'Commissioner', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-:root{
+:root {
     --bs-primary-color: #d0e6fb;
     --bs-blue-color: #06B6D4;
     --bs-seccondary-color: #19263B;
@@ -25,6 +25,10 @@ body {
     color: var(--bs-primary-color) !important;
 }
 
+.text-color-secondary{
+    color: var(--bs-seccondary-color);
+}
+
 .fs-sm {
     font-size: 14px;
     letter-spacing: 0.3px;
@@ -39,10 +43,11 @@ hr {
 }
 
 .fw-bold {
-    font-weight: 600 !important;
+    font-weight: 700 !important;
 }
 
-.card-header, .card-footer {
+.card-header,
+.card-footer {
     background: #F8FAFC !important;
 }
 
@@ -51,7 +56,7 @@ hr {
     padding-left: 20px;
 }
 
-.text-title::before{
+.text-title::before {
     content: '';
     left: 0;
     top: 0;
@@ -62,7 +67,7 @@ hr {
     height: 100%;
 }
 
-.text-title.dark::before{
+.text-title.dark::before {
     background: var(--bs-blue-color) !important;
 }
 
@@ -70,11 +75,11 @@ hr {
 
 /* navbar section  */
 
-.navbar {
+/* .navbar {
     position: absolute;
     top: 0;
     width: 100%;
-}
+} */
 
 /* end navbar section  */
 
@@ -97,6 +102,7 @@ hr {
     font-size: 50px;
     letter-spacing: 0.5px;
 }
+
 #hero-banner p {
     color: var(--bs-primary-color);
     font-size: 24px;
@@ -127,12 +133,12 @@ hr {
 
 /* alquran-audio section  */
 
-#alquran-audio{
+#alquran-audio {
     height: 100%;
     background: var(--bs-seccondary-color);
 }
 
-#alquran-audio .card-footer button{
+#alquran-audio .card-footer button {
     z-index: 5;
     width: 80px;
     height: 80px;
@@ -141,16 +147,16 @@ hr {
     transform: translateX(-50%);
 }
 
-#alquran-audio .audio-content .progress{
+#alquran-audio .audio-content .progress {
     background: #F1F5F9 !important;
     height: 8px;
 }
 
-#alquran-audio .audio-content .progress .progress-bar{
+#alquran-audio .audio-content .progress .progress-bar {
     background: var(--bs-blue-color) !important;
 }
 
-#alquran-audio .audio-content .progress .progress-bar.animate{
+#alquran-audio .audio-content .progress .progress-bar.animate {
     width: 0%;
     animation: audioBarAlIsra 11s linear;
 }
@@ -159,9 +165,22 @@ hr {
     0% {
         width: 0%;
     }
+
     100% {
         width: 100%;
     }
 }
 
 /* end alquran-audio section  */
+
+/* Btn Primary */
+.btn-primary {
+    background-color: var(--bs-seccondary-color);
+    border-color: var(--bs-seccondary-color);
+}
+
+/* Main Banner Section */
+#main-banner .card {
+    background: rgb(210, 255, 200);
+}
+/* End Main Banner Section */
