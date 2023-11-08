@@ -14,13 +14,20 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-    <link href="https://db.onlinewebfonts.com/c/10a0abdeb7fffdc6542dd44ea0f75caf?family=iogensans-Bold" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/10a0abdeb7fffdc6542dd44ea0f75caf?family=iogensans-Bold"
+        rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 
     <link rel="stylesheet" href="css/style.css">
-    
+
     {{-- swiper js --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
@@ -37,7 +44,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-sm bg-transparent navbar-dark ">
+    {{-- <nav class="navbar navbar-expand-sm bg-transparent navbar-dark ">
         <div class="container">
             <a class="navbar-brand" href="/"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -61,11 +68,54 @@
                 </ul>
             </div>
         </div>
+    </nav> --}}
+
+
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{{ asset('img/bm3.png') }}" width="32" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link active" aria-current="page" href="/">Beranda</a>
+                    <a class="nav-link" href="/materi">Materi</a>
+                    <a class="nav-link" href="/jadwal_sholat">Al-Qur'an</a>
+                    <a class="nav-link" href="/alquran">Jadwal Sholat</a>
+                </div>
+            </div>
+        </div>
     </nav>
+
 
     @yield('content')
 
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <footer class="border border-top py-4">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col">
+                    <img src="{{ asset('img/bm3.png') }}" width="44" alt="">
+                </div>
+                <div class="col">
+                    <div class="d-flex justify-content-end">
+                        <a class="nav-link active ms-3" aria-current="page" href="/">Beranda</a>
+                        <a class="nav-link ms-3" href="/materi">Materi</a>
+                        <a class="nav-link ms-3" href="/jadwal_sholat">Al-Qur'an</a>
+                        <a class="nav-link ms-3" href="/alquran">Jadwal Sholat</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center m-0">&copy; Copyright</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
@@ -74,7 +124,7 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
     </script>
 
-    <script src="{{asset('js/main.js')}}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 
     @stack('javascript')
 </body>
