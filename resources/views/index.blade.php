@@ -2,48 +2,15 @@
 @section('title', 'Beranda - Website Agama')
 
 @section('content')
-    {{-- <section id="main-banner" class="mt-3">
-        <div class="container">
-            <div class="card border-0 shadow-sm">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <div class="d-flex flex-column h-100 justify-content-center">
-                                <h6>Selamat Datang di Website Agama</h6>
-                                <h3 class="fw-bold">Mempelajari tentang Agama Islam</h3>
-                                <p class="pe-3">Tempat Anda dapat menemukan sumber daya dan
-                                    informasi penting untuk mendalami agama Anda dengan berkah dan keberkahan dari Allah
-                                    Subhanahu wa Ta'ala.</p>
-                            </div>
 
-                        </div>
-                        <div class="col-md-3">
-                            <img src="{{ asset('img/mosque.png') }}" class="w-100" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
-    {{-- <section id="banner" style="height:300px; background-size: cover; background-image: url({{Storage::url("content/mosque1.jpg")}});">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center content">
-                    <h1 class="mb-1">Islamic Religious Material</h1>
-                    <p>Mempelajari tentang agama islam</p>
-                </div>
-            </div>
-        </div>
-    </section> --}}
+    
 
     <section id="banner" class="py-3 d-flex flex-column justify-content-center">
         <div class="container py-4">
-            <h3 class="fw-bold text-center">Mempelajari Tentang</h3>
-            <h2 class="fw-bold text-center">Agama Islam</h2>
+            {{-- <h2 class="fw-bold text-center">Agama Islam</h2> --}}
 
-            <div class="row justify-content-center mt-5">
-                <div class="col-md-3 col-8">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-12">
                     <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 2759.99 2311.51"
                         id="marhaban-ya-ramadhan">
                         <path fill="#0e1c31"
@@ -262,147 +229,250 @@
                     </svg>
                 </div>
             </div>
-
             <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="card mt-5 shadow" style="background-color: #19263B">
-                        <div class="card-body text-white">
-                            <div>
-                                <span>05:30:32 &MediumSpace; Menjelang Waktu Dzuhur</span>
-                            </div>
-                            <hr>
-                            <div>
-                                <div class="d-flex justify-content-between">
-                                    <div class="">
-                                        <h6>Sholat Dzuhur</h6>
-                                        <span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" class="ionicon"
+                <div class="col-12">
+                    <div class=" mt-4 text-hero text-center">
+                        <h1 class="fw-bold ">MEMPELAJARI TENTANG <br> AGAMA ISLAM</h1>
+                        <p class=" fs-sm mt-3 opacity-75">Mempelajari tentang agama Islam adalah proses mendalam untuk memahami <br> ajaran, nilai-nilai, dan praktik kehidupan yang diakui dalam Islam</p>
+                        <div class="mt-4">
+                            <button class="btn btn-primary rounded-1 border-0 py-2 px-3 fs-sm">Show hdr</button>
+                        </div>
+                        {{-- <h6 class="text-end ">By <span class="fw-bold">RPL Gen VI</span></h6> --}}
+                    </div>
+                </div>
+            </div>
+
+            @if ($nextWaktuJadwal != false && $nextJamJadwal != false)
+                <div class="row justify-content-center mt-4">
+                    <div class="col-md-6">
+                        <div class="card mt-5 shadow" style="background-color: #19263B">
+                            <div class="card-body text-white">
+                                <div class="text-center">
+                                    <span>Selanjutnya Waktu {{ucfirst($nextWaktuJadwal)}}</span>
+                                </div>
+                                <hr>
+                                <div>
+
+                                    <div class="d-flex justify-content-center">
+                                            <span class="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" class="ionicon"
                                                 viewBox="0 0 512 512">
-                                                <path
-                                                    d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z"
-                                                    fill="none" stroke="currentColor" stroke-miterlimit="10"
-                                                    stroke-width="32" />
-                                                <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="32" d="M256 128v144h96" />
-                                            </svg>
-                                        </span>
-                                        <span>11:42</span>
+                                                    <path
+                                                        d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z"
+                                                        fill="none" stroke="currentColor" stroke-miterlimit="10"
+                                                        stroke-width="32" />
+                                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="32" d="M256 128v144h96" />
+                                                </svg>
+                                            </span>
+                                            <h3 class="ms-2">{{$nextJamJadwal}}</h3>
                                     </div>
-                                    <div>
-                                        <div class="d-flex h-100 align-items-end">
-                                            <a href="" class="fs-sm text-white">Jadwal Sholat</a>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            @endif
 
+        </div>
     </section>
 
-    <section id="materi" class="mt-4 py-5">
-        <div class="container">
+    <section id="materi" class="my-5">
+        <div class="container ">
             <div class="header text-center">
-                <h4 class="mb-3 fw-bold">Materi</h4>
-                <h3>Materi Terkini</h3>
-                <p>Jelajahi pengetahuan agama yang kaya dan beragam untuk memperdalam pemahaman Anda tentang Islam</p>
+                <h1 class="mb-2 fw-bold">Materi</h1>
+                <p class="fs-sm">Jelajahi pengetahuan agama yang beragam untuk memperdalam  tentang Islam</p>
             </div>
-            <div class="row gy-3 justify-content-center">
-                <div class="col-md-3 col-10">
-                    <div class="card card-body border-0 p-0 overflow-hidden shadow-sm">
-                        <img src="{{ Storage::url('content/hari-akhir.webp') }}" class="w-100"
-                            style="height: 165px; object-fit: cover" alt="">
-                        <div class="description py-2 px-3">
-                            <div class="fs-sm">21.10.2023</div>
-                            <h5 class="fw-bold text-color-secondary mt-1">Hari Akhir</h5>
-                            <p class="fs-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, beatae.
-                                Voluptate repellat
-                                dolorem quam... </p>
-                            <a href="" class="fs-sm">Baca Selengkapnya</a>
+            <div class="row gy-3 justify-content-center mt-3">
+                <div class="col-lg-5 col-12">
+                    <img src="{{ Storage::url($materiUtama->photo) }}" height="280px" style="object-fit: cover" class="d-block w-100 rounded-2" >
+
+                    </div>
+                    <div class="col-lg-7 col-12">
+                        <h2 class="fw-bold titleIndexMateri">{{strtoupper($materiUtama->title)}}</h2>
+                        <h6 class="fs-sm subTitle-index">{{$materiUtama->sub_title}}</h6>
+                        <p class="fs-s-sm mt-3 text-description-index">{{strip_tags($materiUtama->body)}}</p>
+                        <div class="d-flex align-content-end align-items-end">
+                            <div class="">
+                                <a href="/materi/{{$materiUtama->slug}}" class="btn btn-primary rounded-1 fs-s-sm mb-3 btn-sm">See More</a>
+                                <p class="mb-0 fs-s-sm opacity-50">12-12-2023</p>
+                            </div>
                         </div>
+
                     </div>
                 </div>
-                <div class="col-md-3 col-10">
-                    <div class="card card-body border-0 p-0 overflow-hidden shadow-sm">
-                        <img src="{{ Storage::url('content/hari-akhir.webp') }}" class="w-100"
-                            style="height: 165px; object-fit: cover" alt="">
-                        <div class="description py-2 px-3">
-                            <div class="fs-sm">21.10.2023</div>
-                            <h5 class="fw-bold text-color-secondary mt-1">Hari Akhir</h5>
-                            <p class="fs-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, beatae.
-                                Voluptate repellat
-                                dolorem quam... </p>
-                            <a href="" class="fs-sm">Baca Selengkapnya</a>
-                        </div>
+
+                <div class="row mt-3 flex-nowrap overflow-auto">
+                    @foreach($materi as $data)
+                    <div class="col-lg-auto col-6 mb-3 pe-2">
+                        <a href="/materi/{{$data->slug}}" class="d-block">
+                            <img src="{{ Storage::url($data->photo) }}" height="150px" class="d-block w-100 rounded-2 object-fit-cover" >
+                        </a>
                     </div>
+                    @endforeach
                 </div>
-                <div class="col-md-3 col-10">
-                    <div class="card card-body border-0 p-0 overflow-hidden shadow-sm">
-                        <img src="{{ Storage::url('content/hari-akhir.webp') }}" class="w-100"
-                            style="height: 165px; object-fit: cover" alt="">
-                        <div class="description py-2 px-3">
-                            <div class="fs-sm">21.10.2023</div>
-                            <h5 class="fw-bold text-color-secondary mt-1">Hari Akhir</h5>
-                            <p class="fs-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, beatae.
-                                Voluptate repellat
-                                dolorem quam... </p>
-                            <a href="" class="fs-sm">Baca Selengkapnya</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-10">
-                    <div class="card card-body border-0 p-0 overflow-hidden shadow-sm">
-                        <img src="{{ Storage::url('content/hari-akhir.webp') }}" class="w-100"
-                            style="height: 165px; object-fit: cover" alt="">
-                        <div class="description py-2 px-3">
-                            <div class="fs-sm">21.10.2023</div>
-                            <h5 class="fw-bold text-color-secondary mt-1">Hari Akhir</h5>
-                            <p class="fs-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, beatae.
-                                Voluptate repellat
-                                dolorem quam... </p>
-                            <a href="" class="fs-sm">Baca Selengkapnya</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <a href="" class="btn btn-primary">Materi Lainnya</a>
+                
             </div>
         </div>
     </section>
 
-    <section id="alquran" class="py-5">
-        <div class="container">
-            <div class="card card-body border-0" style="background-color: #19263B">
-                <div class="header">
-                    <h3 class="text-white text-center">Al Qur'an</h3>
-                    <p class="text-white text-center">Membaca Al-Qur'an di mana saja dan kapan saja.</p>
+    <section id="jadwal-sholat-wrapper" class="my-5">
+        <div class="container h-100">
+            <div class="header text-center">
+                <h1 class="mb-2 fw-bold">Jadwal Sholat</h1>
+                <p class="fs-sm">Selalu melihat jadwal sholat ketika kita akan melaksanakan sholat!</p>
+            </div>
+
+            <div class="row gy-3 justify-content-center mt-3 h-100">
+                <div class="col-lg-8 col-12 h-100 order-lg-0 order-1 ">
+                    <h2 class="fw-bold titleIndexMateri">Bulan ini</h2>
+                    <h6 class="fs-sm subTitle-index">Jadwal adzan bulan ini</h6>
+                    <hr>
+                    <div class="card rounded-1" style="overflow: auto; height: 480px;">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Tanggal</th>
+                                                <th>Shubuh</th>
+                                                <th>Dzuhur</th>
+                                                <th>Ashr</th>
+                                                <th>Magrib</th>
+                                                <th>Isya</th>
+                                            </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($jadwal as $data)
+                                        <tr>
+                                            <td>{{$data['tanggal']}}</td>
+                                            <td>{{$data['shubuh']}}</td>
+                                            <td>{{$data['dzuhur']}}</td>
+                                            <td>{{$data['ashr']}}</td>
+                                            <td>{{$data['magrib']}}</td>
+                                            <td>{{$data['isya']}}</td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="content px-4">
-                    <div class="card rounded-1 shadow-sm mb-5">
-                        <div class="card-header py-3 border-0">
-                            <p class="mb-0"><b>AL-ISRA</b> : 32</p>
+                    <div class="col-lg-4 col-12 order-lg-1 order-0">
+                        <h2 class="fw-bold titleIndexMateri">Jadwal Adzan</h2>
+                        <h6 class="fs-sm subTitle-index">Jadwal adzan hari ini</h6>
+                        <hr>
+                        <div class="card rounded-1  ">
+                            <div class="card-body">
+                                <hr class="mx-5">
+                                <table class="table border-0">
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bolder border-0 fs-sm">Shubuh</td>
+                                            <td class="fs-s-sm border-0">:</td>
+                                            <td class="fs-s-sm border-0">{{$getJadwal['shubuh']}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bolder border-0 fs-sm">Dzuhur</td>
+                                            <td class="fs-s-sm border-0">:</td>
+                                            <td class="fs-s-sm border-0">{{$getJadwal['dzuhur']}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bolder border-0 fs-sm">Ashr</td>
+                                            <td class="fs-s-sm border-0">:</td>
+                                            <td class="fs-s-sm border-0">{{$getJadwal['ashr']}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bolder border-0 fs-sm">Magrib</td>
+                                            <td class="fs-s-sm border-0">:</td>
+                                            <td class="fs-s-sm border-0">{{$getJadwal['magrib']}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bolder border-0 fs-sm">Isya</td>
+                                            <td class="fs-s-sm border-0">:</td>
+                                            <td class="fs-s-sm border-0">{{$getJadwal['isya']}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <hr class="mx-5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="alquran" >
+        <div class="container my-5">
+            <div class="header text-center">
+                <h1 class="mb-2 fw-bold">Al Qur'an</h1>
+                <p class="fs-sm">Baca Al-Qur'an kapanpun dirimu berada!</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-5 col-12 mt-3 order-lg-0 order-1">
+                    <h2 class="fw-bold titleIndexMateri">Baca Al-Qur'an</h2>
+                    <h6 class="fs-s-sm opacity-75">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil fugiat velit cupiditate autem</h6>
+                    <p class="fs-s-sm mt-3 opacity-75">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque delectus ipsa minus tenetur perferendis magni ab dignissimos illo optio enim. Consectetur saepe nulla unde aspernatur, ipsam culpa commodi neque ad tempora <br> <span class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ducimus voluptatum minima</span></p>
+                    <a href="/al-quran" class="btn btn-primary rounded-1 border-0 fs-s-sm mt-3">See More</a>
+                    {{-- <div class="card rounded-1">
+                        <div class="card-body">
+                            
+                        </div>
+                    </div> --}}
+                </div>
+
+                <div class="col-lg-7 col-12 mt-3 order-lg-1 order-0">
+                    <div class="card rounded-1">
+                        <div class="card-body">
+                            <hr class="mx-5">
+                            <h1 class="text-end fw-bold">{{$alisra['teksArab']}}</h1>
+                            <p class="mt-3 fs-sm">{{$alisra['teksLatin']}}</p>
+                            <p class="fs-sm">{{$alisra['teksIndonesia']}} <br> <br> <span class="fw-bold "> Al Isra 17:32</span></p>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="berita" >
+        <div class="container my-5">
+            <div class="header text-center">
+                <h1 class="mb-2 fw-bold">Berita</h1>
+                <p class="fs-sm">Berita pengumuman terbaru yang disampaikan</p>
+            </div>
+
+            <div class="row flex-nowrap overflow-auto mt-3">
+                @foreach($berita as $data)
+                <div class="col-lg-3 col-md-6 col-8 px-2 ">
+                    <div class="card rounded-1 shadow-sm h-100">
+                        <div class="card-header p-0">
+                            <img src="{{ Storage::url($data->photo) }}" height="200px" class="w-100 object-fit-cover" alt="">
                         </div>
                         <div class="card-body">
-                            <h1 class="text-end"><b>{{ $alisra['teksArab'] }}</b></h1>
-                            <p class="fs-5 mt-3">{{ $alisra['teksLatin'] }}</p>
-                            <p>{{ $alisra['teksIndonesia'] }}</p>
-                        </div>
-                        <div class="audio-content my-4">
-                            <audio id="audio-alIsra"
-                                src="https://equran.nos.wjv-1.neo.id/audio-partial/Misyari-Rasyid-Al-Afasi/017032.mp3"></audio>
-
-                            {{-- <button class="btn btn-primary rounded-circle bg-white text-dark border-0 shadow-sm"></button> --}}
+                            <h6 class="fw-bolder">{{$data->title}}</h6>
+                            <p class="fs-s-sm">{{$data->sub_title}}</p>
+                            <div class="text-end mt-2">
+                                <a href="/berita/{{$data->slug}}" class="btn btn-primary rounded-1 border-0 fs-s-sm">Lihat</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="text-center">
-                    <a href="" class="btn btn-primary">Baca Al-Qur'an</a>
-                </div>
+                @endforeach
             </div>
+            <div class="text-center mt-3">
+                <a href="/berita" class="btn btn-primary rounded-1 fs-sm px-3 py-2">See More</a>
+            </div>
+
         </div>
     </section>
 

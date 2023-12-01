@@ -34,6 +34,15 @@ body {
     letter-spacing: 0.3px;
 }
 
+.fs-s-sm {
+    font-size: 13px;
+    letter-spacing: 0.3px;
+}
+
+.text-gray {
+    color: #757575;
+}
+
 hr {
     opacity: 0.1;
 }
@@ -44,6 +53,10 @@ hr {
 
 .fw-bold {
     font-weight: 700 !important;
+}
+
+td, th {
+    white-space: nowrap !important;
 }
 
 .card-header,
@@ -93,6 +106,14 @@ hr {
     height: 760px;
 }
 
+.text-hero h1 {
+    font-size: 42px;
+    letter-spacing: 0.8px;
+    line-height: 1.1;
+}
+
+/* .text-hero  */
+
 #hero-banner .content {
     margin-top: 580px;
 }
@@ -112,13 +133,47 @@ hr {
 
 /* end hero section  */
 
+/* materi section  */
+
+.titleIndexMateri { 
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+
+.subTitle-index {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    opacity: 80%;
+    font-weight: 400;
+}
+
+.text-description-index {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    opacity: 70%;
+}
+
+/* end materi section  */
+
 /* jadwal sholat section  */
 
 #jadwal-sholat {
-    height: 800px;
+    height: 560px;
 }
 
-#jadwal-sholat h1 {
+/* #jadwal-sholat h1 {
     font-size: 40px;
     color: var(--bs-seccondary-color);
     font-weight: 600;
@@ -127,7 +182,7 @@ hr {
 #jadwal-sholat .container .month .card .card-body {
     height: 500px;
     overflow: auto;
-}
+} */
 
 /* end jadwal sholat section  */
 
@@ -175,9 +230,36 @@ hr {
 
 /* Btn Primary */
 .btn-primary {
-    background-color: var(--bs-seccondary-color);
-    border-color: var(--bs-seccondary-color);
+    background-color: var(--bs-seccondary-color) !important;
+    border-color: var(--bs-seccondary-color) !important;
 }
+
+.btn-primary:focus   {
+    background-color: var(--bs-seccondary-color) !important;
+    border-color: var(--bs-seccondary-color) !important;
+}
+
+/* berita section  */
+
+#berita h6 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+
+#berita p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+
+/* end berita section  */
 
 /* Main Banner Section */
 #main-banner .card {

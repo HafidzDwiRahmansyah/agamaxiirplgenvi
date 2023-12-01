@@ -11,10 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('content', function (Blueprint $table) {
+        Schema::create('contents', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('body');
+            $table->string('photo')->nullable();
+            $table->string('slug')->nullable();
+            $table->string('title')->nullable();
+            $table->string('sub-title')->nullable();
+            $table->longText('body')->nullable();
+            $table->enum('jenis', ['1', '2'])->nullable();
             $table->timestamps();
         });
     }
@@ -24,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('content');
+        Schema::dropIfExists('contents');
     }
 };

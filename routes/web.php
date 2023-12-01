@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ContentController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\MateriController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,6 +38,19 @@ Route::get('/materi/hari-akhir', function () {
 Route::get('/materi/menjadi-yang-terbaik', function () {
     return view('materi/menjadi-terbaik');
 });
+
+// auth 
+Route::get('/login', [AuthController::class, 'index'])->name('login');
+Route::post('/login', [AuthController::class, 'index']);
+
+Route::get('/logout', [AuthController::class, 'logout']);
+
+// admin 
+Route::middleware(['auth'])->group(function () { 
+    Route::get('/admin', [AdminController::class, 'index']);
+    Route::resource('/admin/content', ContentController::class);;
+});
+
 
 // // hdr
 // Route::get('/', [IndexController::class, 'index']);
