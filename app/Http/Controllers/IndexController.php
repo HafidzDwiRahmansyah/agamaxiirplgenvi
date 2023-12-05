@@ -99,14 +99,32 @@ class IndexController extends Controller
     }
 
     function materi_agama(){
-        return view('materi');
+
+        $materi = Content::where('jenis', 1)->inRandomOrder()->get();
+        $materiTerbaru = Content::where('jenis', 1)->orderByDesc('created_at')->get();
+        $materiTerlama = Content::where('jenis', 1)->orderBy('created_at', 'asc')->get();
+        // dd($materi);
+        return view('materi', compact('materi', 'materiTerbaru', 'materiTerlama'));
     }
 
     function jadwal_sholat(){
         return view('jadwal_sholat');
     }
 
-    function alquran(){
-        return view('alquran');
+    function alquran() {
+        $quranAll = Http::get('https://equran.id/api/v2/surat/')->json();
+        // dd($quranAll['data']);
+
+        return view('alquran.alquran', compact('quranAll'));
+        
     }
+
+    function alquranSurah($surah){
+        $quranAll = Http::get('https://equran.id/api/v2/surat/')->json();
+        $quranData = Http::get('https://equran.id/api/v2/surat/'.$surah)->json();
+        // dd($quranData);
+
+        return view('alquran.surah', compact('quranAll', 'quranData'));
+    }
+    
 }

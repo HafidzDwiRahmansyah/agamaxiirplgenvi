@@ -21,6 +21,10 @@ body {
     /* background: linear-gradient(to bottom, var(--bs-seccondary-color), rgba(0, 255, 0, 0)); */
 }
 
+.form-control:focus {
+    box-shadow: none !important;
+}
+
 .color-primary {
     color: var(--bs-primary-color) !important;
 }
@@ -165,6 +169,18 @@ td, th {
     opacity: 70%;
 }
 
+.nav-link.text-color-secondary:hover {
+    transition: 0.5s;
+    border-bottom: solid 1px var(--bs-seccondary-color);
+    color: var(--bs-seccondary-color) !important;
+}
+
+.nav-link.text-color-secondary:focus, .nav-pills .nav-link.active {
+    color: var(--bs-seccondary-color);
+    background: none !important;
+}
+
+
 /* end materi section  */
 
 /* jadwal sholat section  */
@@ -185,6 +201,20 @@ td, th {
 } */
 
 /* end jadwal sholat section  */
+
+/* Al quran  */
+
+.surah-column, .ayat-column {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    /* background: rgb(191, 191, 191); */
+    overflow-y: scroll;
+}
+
+/* End Al quran  */
 
 /* alquran-audio section  */
 

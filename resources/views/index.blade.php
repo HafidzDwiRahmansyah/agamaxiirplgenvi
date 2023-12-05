@@ -305,7 +305,7 @@
 
                 <div class="row mt-3 flex-nowrap overflow-auto">
                     @foreach($materi as $data)
-                    <div class="col-lg-auto col-6 mb-3 pe-2">
+                    <div class="col-lg-3 col-6 mb-3 pe-2">
                         <a href="/materi/{{$data->slug}}" class="d-block">
                             <img src="{{ Storage::url($data->photo) }}" height="150px" class="d-block w-100 rounded-2 object-fit-cover" >
                         </a>
@@ -417,8 +417,8 @@
 
                 <div class="col-lg-5 col-12 mt-3 order-lg-0 order-1">
                     <h2 class="fw-bold titleIndexMateri">Baca Al-Qur'an</h2>
-                    <h6 class="fs-s-sm opacity-75">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil fugiat velit cupiditate autem</h6>
-                    <p class="fs-s-sm mt-3 opacity-75">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque delectus ipsa minus tenetur perferendis magni ab dignissimos illo optio enim. Consectetur saepe nulla unde aspernatur, ipsam culpa commodi neque ad tempora <br> <span class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ducimus voluptatum minima</span></p>
+                    <h6 class="fs-s-sm opacity-75">Membaca Al-Quran bukan sekadar kewajiban, melainkan anugerah kehidupan</h6>
+                    <p class="fs-s-sm mt-3 opacity-75">Membaca Al-Quran adalah kegiatan spiritual yang mendalam. Dengan penuh khidmat, umat Islam membuka <br> halaman-halaman suci, merenungi ayat-ayat ilahi yang sarat makna. Dalam kesunyian, setiap lafal Al-Quran meresap ke dalam hati, membawa ketenangan dan petunjuk hidup. Membaca Al-Quran bukan hanya rutinitas, melainkan bentuk interaksi pribadi dengan Sang Pencipta.</span></p>
                     <a href="/al-quran" class="btn btn-primary rounded-1 border-0 fs-s-sm mt-3">See More</a>
                     {{-- <div class="card rounded-1">
                         <div class="card-body">
@@ -460,7 +460,7 @@
                         </div>
                         <div class="card-body">
                             <h6 class="fw-bolder">{{$data->title}}</h6>
-                            <p class="fs-s-sm">{{$data->sub_title}}</p>
+                            <p class="fs-s-sm opacity-75">{{$data->sub_title}}</p>
                             <div class="text-end mt-2">
                                 <a href="/berita/{{$data->slug}}" class="btn btn-primary rounded-1 border-0 fs-s-sm">Lihat</a>
                             </div>
