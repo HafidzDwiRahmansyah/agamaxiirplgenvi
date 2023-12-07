@@ -32,18 +32,8 @@ Route::get('/jadwal-sholat', [IndexController::class, 'jadwal_sholat'])->name('j
 
 Route::get('/al-quran', [IndexController::class, 'alquran'])->name('alquran');
 Route::get('/al-quran/{ayat}/{nama}', [IndexController::class, 'alquranSurah'])->name('alquranSurah');
+Route::get('/al-quran/jadwal-adzan/{city}/city', [IndexController::class, 'getDataFromCity']);
 
-// Route::get('/materi/rasa-bersyukur', function () {
-//     return view('materi/bersyukur');
-// });
-
-// Route::get('/materi/hari-akhir', function () {
-//     return view('materi/kiamat');   
-// });
-
-// Route::get('/materi/menjadi-yang-terbaik', function () {
-//     return view('materi/menjadi-terbaik');
-// });
 
 // auth 
 Route::get('/login', [AuthController::class, 'index'])->name('login');

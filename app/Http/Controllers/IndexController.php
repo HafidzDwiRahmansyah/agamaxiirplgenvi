@@ -126,7 +126,34 @@ class IndexController extends Controller
     }
 
     function jadwal_sholat(){
-        return view('jadwal_sholat');
+        $year = Carbon::now()->format('Y');
+        $month = Carbon::now()->format('m');
+        
+        $url = "https://raw.githubusercontent.com/lakuapik/jadwalsholatorg/master/adzan/bogor/{$year}/{$month}.json";
+        $urlKota = "https://raw.githubusercontent.com/lakuapik/jadwalsholatorg/master/kota.json";
+        
+        $jadwal = Http::get($url)->json();
+        $getKota = Http::get($urlKota)->json();
+        // dd($jadwal);
+        
+        // dd($jadwal);
+        return view('jadwal_sholat', compact('getKota', 'jadwal'));
+    }
+
+    function getDataFromCity($city) {
+        $year = Carbon::now()->format('Y');
+        $month = Carbon::now()->format('m');
+        
+        $url = "https://raw.githubusercontent.com/lakuapik/jadwalsholatorg/master/adzan/{$city}/{$year}/{$month}.json";
+        $jadwal = Http::get($url)->json();
+        
+        if($jadwal == NULL){
+            $url = "https://raw.githubusercontent.com/lakuapik/jadwalsholatorg/master/adzan/bogor/{$year}/{$month}.json";
+            $jadwal = Http::get($url)->json();
+
+        }
+
+        return response()->json(['success' => $jadwal]);
     }
 
     function alquran() {

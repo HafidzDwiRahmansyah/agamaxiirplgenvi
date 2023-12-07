@@ -3,6 +3,17 @@
 
 @section('content')
 
+
+<div class="modal fade" id="ModalHDR" tabindex="-1" aria-labelledby="ModalHDRLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-xl">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <img src="{{asset('img/hdrrobot.png')}}" width="100%" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
     
 
     <section id="banner" class="py-3 d-flex flex-column justify-content-center">
@@ -235,7 +246,7 @@
                         <h1 class="fw-bold ">MEMPELAJARI TENTANG <br> AGAMA ISLAM</h1>
                         <p class=" fs-sm mt-3 opacity-75">Mempelajari tentang agama Islam adalah proses mendalam untuk memahami <br> ajaran, nilai-nilai, dan praktik kehidupan yang diakui dalam Islam</p>
                         <div class="mt-4">
-                            <button class="btn btn-primary rounded-1 border-0 py-2 px-3 fs-sm">Show hdr</button>
+                            <button class="btn btn-primary rounded-1 border-0 py-2 px-3 fs-sm" data-bs-toggle="modal" data-bs-target="#ModalHDR">Show hdr</button>
                         </div>
                         {{-- <h6 class="text-end ">By <span class="fw-bold">RPL Gen VI</span></h6> --}}
                     </div>
