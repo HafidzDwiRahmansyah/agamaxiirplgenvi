@@ -214,6 +214,15 @@ td, th {
     overflow-y: scroll;
 }
 
+.surah-column a {
+    padding: 13px 20px;
+    border-radius: 3px;
+}
+.surah-column a:hover {
+    color: #fff !important;
+    background: var(--bs-seccondary-color);
+}
+
 /* End Al quran  */
 
 /* alquran-audio section  */

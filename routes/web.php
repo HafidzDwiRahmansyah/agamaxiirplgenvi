@@ -24,6 +24,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/materi', [IndexController::class, 'materi_agama']);
+Route::get('/materi/{slug}', [IndexController::class, 'materiContent']);
+
+Route::get('/berita/{slug}', [IndexController::class, 'beritaContent']);
+
 Route::get('/jadwal-sholat', [IndexController::class, 'jadwal_sholat'])->name('jadwalSholat');
 
 Route::get('/al-quran', [IndexController::class, 'alquran'])->name('alquran');

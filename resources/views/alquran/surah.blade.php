@@ -7,9 +7,7 @@
             <div class="col-lg-2 d-lg-block d-none">
                 <div class="surah-column">
                     @foreach ($quranAll['data'] as $item)
-                        <p class="my-4 mx-2">
-                            <a href="/al-quran/{{$item['nomor']}}/{{strtolower($item['namaLatin'])}}" class="text-decoration-none text-dark">{{$item['namaLatin']}}</a>
-                        </p>
+                        <a href="/al-quran/{{$item['nomor']}}/{{strtolower($item['namaLatin'])}}" class="text-decoration-none text-dark m-2 d-block ">{{$item['namaLatin']}}</a>
                     @endforeach
                 </div>
             </div>

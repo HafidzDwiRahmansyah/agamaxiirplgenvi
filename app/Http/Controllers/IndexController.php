@@ -104,7 +104,25 @@ class IndexController extends Controller
         $materiTerbaru = Content::where('jenis', 1)->orderByDesc('created_at')->get();
         $materiTerlama = Content::where('jenis', 1)->orderBy('created_at', 'asc')->get();
         // dd($materi);
-        return view('materi', compact('materi', 'materiTerbaru', 'materiTerlama'));
+        return view('materi.materi', compact('materi', 'materiTerbaru', 'materiTerlama'));
+    }
+
+    function materiContent($slug) {
+        $materi = Content::where('slug', $slug)->where('jenis', 1)->first();
+        if($materi == NULL){
+            abort(404);
+        }
+
+        return view('materi.materi-content', compact('materi'));
+    }
+
+    function beritaContent($slug) {
+        $berita = Content::where('slug', $slug)->where('jenis', 2)->first();
+        if($berita == NULL){
+            abort(404);
+        }
+
+        return view('berita.berita-content', compact('berita'));
     }
 
     function jadwal_sholat(){

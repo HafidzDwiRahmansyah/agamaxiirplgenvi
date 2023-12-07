@@ -287,21 +287,18 @@
             <div class="row gy-3 justify-content-center mt-3">
                 <div class="col-lg-5 col-12">
                     <img src="{{ Storage::url($materiUtama->photo) }}" height="280px" style="object-fit: cover" class="d-block w-100 rounded-2" >
-
-                    </div>
-                    <div class="col-lg-7 col-12">
-                        <h2 class="fw-bold titleIndexMateri">{{strtoupper($materiUtama->title)}}</h2>
-                        <h6 class="fs-sm subTitle-index">{{$materiUtama->sub_title}}</h6>
-                        <p class="fs-s-sm mt-3 text-description-index">{{strip_tags($materiUtama->body)}}</p>
-                        <div class="d-flex align-content-end align-items-end">
-                            <div class="">
-                                <a href="/materi/{{$materiUtama->slug}}" class="btn btn-primary rounded-1 fs-s-sm mb-3 btn-sm">See More</a>
-                                <p class="mb-0 fs-s-sm opacity-50">12-12-2023</p>
-                            </div>
-                        </div>
-
+                </div>
+                <div class="col-lg-7 col-12 d-flex flex-column">
+                    <h2 class="fw-bold titleIndexMateri">{{ strtoupper($materiUtama->title) }}</h2>
+                    <h6 class="fs-sm subTitle-index">{{ $materiUtama->sub_title }}</h6>
+                    <p class="fs-s-sm mt-3 text-description-index">{{ strip_tags($materiUtama->body) }}</p>
+                    <div class="mt-auto">
+                        <a href="/materi/{{$materiUtama->slug}}" class="btn btn-primary rounded-1 fs-s-sm mb-3 btn-sm">See More</a>
+                        <p class="mb-0 fs-s-sm opacity-50">12-12-2023</p>
                     </div>
                 </div>
+            </div>
+            
 
                 <div class="row mt-3 flex-nowrap overflow-auto">
                     @foreach($materi as $data)
@@ -458,19 +455,16 @@
                         <div class="card-header p-0">
                             <img src="{{ Storage::url($data->photo) }}" height="200px" class="w-100 object-fit-cover" alt="">
                         </div>
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h6 class="fw-bolder">{{$data->title}}</h6>
                             <p class="fs-s-sm opacity-75">{{$data->sub_title}}</p>
-                            <div class="text-end mt-2">
+                            <div class="text-end mt-auto">
                                 <a href="/berita/{{$data->slug}}" class="btn btn-primary rounded-1 border-0 fs-s-sm">Lihat</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 @endforeach
-            </div>
-            <div class="text-center mt-3">
-                <a href="/berita" class="btn btn-primary rounded-1 fs-sm px-3 py-2">See More</a>
             </div>
 
         </div>

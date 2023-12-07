@@ -23,6 +23,7 @@
             <hr>
                 <div class="tab-content" id="data-materi">
                     <div class="tab-pane fade show active" id="all-materi" role="tabpanel" tabindex="0">
+
                         <!-- Content for All Materi -->
                         <div class="row mt-3 justify-content-lg-start justify-content-center">
                             @foreach($materi as $data)
@@ -31,16 +32,17 @@
                                     <div class="card-header p-0">
                                         <img src="{{ Storage::url($data->photo) }}" height="200px" class="w-100 object-fit-cover" alt="">
                                     </div>
-                                    <div class="card-body">
+                                    <div class="card-body d-flex flex-column">
                                         <h6 class="fw-bolder">{{$data->title}}</h6>
                                         <p class="fs-s-sm opacity-75">{{$data->sub_title}}</p>
-                                        <div class="text-end mt-2">
-                                            <a href="/berita/{{$data->slug}}" class="btn btn-primary rounded-1 border-0 fs-s-sm">Lihat</a>
+                                        <div class="text-end mt-auto">
+                                            <a href="/materi/{{$data->slug}}" class="btn btn-primary rounded-1 border-0 fs-s-sm">Lihat</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            @endforeach
+                        @endforeach
+                        
                         </div>
                         
                     </div>
@@ -54,11 +56,11 @@
                                     <div class="card-header p-0">
                                         <img src="{{ Storage::url($data->photo) }}" height="200px" class="w-100 object-fit-cover" alt="">
                                     </div>
-                                    <div class="card-body">
+                                    <div class="card-body d-flex flex-column">
                                         <h6 class="fw-bolder">{{$data->title}}</h6>
                                         <p class="fs-s-sm opacity-75">{{$data->sub_title}}</p>
-                                        <div class="text-end mt-2">
-                                            <a href="/berita/{{$data->slug}}" class="btn btn-primary rounded-1 border-0 fs-s-sm">Lihat</a>
+                                        <div class="text-end mt-auto">
+                                            <a href="/materi/{{$data->slug}}" class="btn btn-primary rounded-1 border-0 fs-s-sm">Lihat</a>
                                         </div>
                                     </div>
                                 </div>
@@ -77,11 +79,11 @@
                                     <div class="card-header p-0">
                                         <img src="{{ Storage::url($data->photo) }}" height="200px" class="w-100 object-fit-cover" alt="">
                                     </div>
-                                    <div class="card-body">
+                                    <div class="card-body d-flex flex-column">
                                         <h6 class="fw-bolder">{{$data->title}}</h6>
                                         <p class="fs-s-sm opacity-75">{{$data->sub_title}}</p>
-                                        <div class="text-end mt-2">
-                                            <a href="/berita/{{$data->slug}}" class="btn btn-primary rounded-1 border-0 fs-s-sm">Lihat</a>
+                                        <div class="text-end mt-auto">
+                                            <a href="/materi/{{$data->slug}}" class="btn btn-primary rounded-1 border-0 fs-s-sm">Lihat</a>
                                         </div>
                                     </div>
                                 </div>
